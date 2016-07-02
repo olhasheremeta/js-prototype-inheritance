@@ -6,11 +6,8 @@ function Domain() {
 function Regnum() {
   this.regnum = 'Animalia'; 
   this.form = 'animal';
-  //this.__proto__= Domain;
 };
-
 Regnum.prototype = new Domain();
-
 
 function Type() {
   this.type = 'Chordata'; 
@@ -19,8 +16,8 @@ function Type() {
 Type.prototype = new Regnum();
 
 function Classis() {
-  this.classis = 'Mammalia'; // 15
-  this.mammal = true; // 16
+  this.classis = 'Mammalia';
+  this.mammal = true;
 }
 Classis.prototype = new Type(); 
 
@@ -47,7 +44,6 @@ function Species(species) {
 }
 Species.prototype = new Genus();
 
-
 var dog = new Species('Dog');
 
 console.log(
@@ -62,23 +58,9 @@ console.log(
 );
 
 console.log(
-  dog.mammal,
-  dog.coat
+dog.mammal,
+dog.coat
+);
 
-  );
 
 
-/*var domain = {
-  domain: 'yaderni',
-  level: 1
-};
-
-var regnum = {
-  regnum: 'bacteria',
-  level: 2
-};
-
-regnum.__proto__ = domain;
-
-//console.log(regnum instanceof domain);
-console.log(regnum.domain);*/
